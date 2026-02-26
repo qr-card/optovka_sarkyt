@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "EuclidCircularA", sans-serif;
+  background: #fff;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.tabs-wrapper {
+  max-width: 100%;
+  min-width: 100%;
+  margin: 0 auto;
+  border: 2px solid #cce0f5;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.tab-headers {
+  display: flex;
+  width: 100%;
+}
+
+.tab-header {
+  font-family: "EuclidCircularA", sans-serif;
+  flex: 1 1 0%;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  background: #cb2d39;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.tab-header.active {
+  background: #fff;
+  color: #cb2d39;
+}
+
+.tab-header:not(.active):hover {
+  background: #cce0f5;
+}
+
+.tab-content-area {
+  padding: 0px 0px;
+  min-height: 60px;
+  text-align: center;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Новая карточка Instagram */
+.instagram-card {
+  display: flex;
+  align-items: center; /* иконка по центру по вертикали */
+  gap: 10px;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 16px 16px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.card-content {
+  flex: 1;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 4px;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+}

@@ -1,0 +1,36 @@
+.schedule {
+  min-height: 400px;
+  margin: 0;
+  background: white;
+  overflow: hidden;
+}
+.hd {
+  padding: 18px;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #cce0f5;
+}
+.day {
+  font-size: 1rem;
+  width: 50%;
+  background: #ffffff;
+}
+.time {
+  font-size: 1rem;
+}
+.weekend {
+  background: #ffebee;
+  color: #c62828;
+}
+.ft {
+  padding: 14px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #444444;
+}
