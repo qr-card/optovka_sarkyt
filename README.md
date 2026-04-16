@@ -1,1 +1,1 @@
-# optovka_sarkyt
+# QR-card Оптовка Саркыт

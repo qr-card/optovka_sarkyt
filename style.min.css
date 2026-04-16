@@ -147,6 +147,18 @@ header {
   grid-template-rows: auto;
   overflow: hidden;
 }
+.headerImgCrepeat {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  overflow: hidden;
+  background-image: url("./cover2.svg");
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: 40px 40px;
+  width: 100%;
+  height: 8rem;
+}
 #cover {
   grid-column: 1;
   grid-row: 1;
@@ -157,6 +169,7 @@ header {
   -o-object-fit: cover;
   object-fit: cover;
 }
+
 #logo {
   max-height: 6rem;
   pointer-events: none;

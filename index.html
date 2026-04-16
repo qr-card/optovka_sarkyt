@@ -302,8 +302,8 @@
 
         <!---->
       </div>
-      <div class="headerImgC">
-        <img id="cover" src="./cover.webp" alt="Background Pattern" />
+      <div class="headerImgCrepeat">
+        <!-- <img id="cover" src="./cover.svg" alt="Background Pattern" /> -->
         <!---->
       </div>
     </header>
@@ -592,7 +592,7 @@
     <prefooter class="">
       <!-- prettier-ignore -->
       <p class="prefooter-text" style="background-color: #cb2d39; color: #fff">
-        <b>Мы находимся по адресу:</b><br />Караганда, ул. Затаевича 75,<br />ТД Саркыт, бутик 31-34.
+        <b>Мы находимся по адресу:</b><br />г. Караганда, ул. Затаевича 75,<br />торговый дом Саркыт, бутик 34.
       </p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d644.0103317619291!2d73.10579447523801!3d49.78528775520752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42434744722de7ef%3A0x7fd14fa912bf798!2z0KHQsNGA0pvRi9GC!5e0!3m2!1sen!2skz!4v1769304396777!5m2!1sen!2skz"
@@ -733,5 +733,76 @@
         }));
     </script>
     <script src="tabs.js"></script>
+    <!-- Fullscreen Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="loader-content">
+        <div class="spinner"></div>
+        <p class="loading-text">Загрузка...</p>
+      </div>
+    </div>
+
+    <style>
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+        opacity: 1;
+      }
+
+      .loader-content {
+        text-align: center;
+      }
+
+      .spinner {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 20px;
+        border: 6px solid #444444;
+        border-top: 6px solid #cb2d39;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+
+      .loading-text {
+        font-family: font;
+        font-size: 18px;
+        color: #222222;
+        margin: 0;
+        letter-spacing: 0px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .preloader.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+
+        setTimeout(() => {
+          preloader.classList.add("hide");
+
+          setTimeout(() => {
+            preloader.remove();
+          }, 900);
+        }, 400);
+      });
+    </script>
   </body>
 </html>
